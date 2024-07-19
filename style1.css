@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-image: url("wall.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#wrapper {
+    width: 90%;
+    margin: 0 auto; /* Center the wrapper */
+
+}
+
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2%;
+    height: 70px;
+    margin-bottom: 10px;
+}
+#discount {
+    margin-top: 20px; /* Example margin top */
+    text-align: center;
+}
+
+#discount img {
+    max-width: 100%;
+}
+#logo {
+    padding-top: 1%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#navigation {
+    padding-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    text-align: right;
+    font-size: 15px;
+    color: black;
+}
+
+#navigation a {
+    color: black;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+#navigation a:hover {
+    text-decoration: underline;
+}
+
+a:link {
+    color: black;
+    font-weight: bold;
+}
+
+#header {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+#header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#brandcat {
+    font-weight: bolder;
+    width: 20%;
+    padding: 10px 20px;                     
+    background-color: #1b1b1b;
+    text-align: center;
+    margin: 0 auto 10px auto;                        
+    font-size: small;    
+    line-height: 2.0;
+}
+
+#brandcat h3 {
+    color: #FFF;
+}
+#content-section {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+    flex: 1;
+}
+
+.about-text {
+    flex: 2;
+    padding: 20px;
+    background-color: #000; /* Changed to match the general dark theme */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #ffffff; 
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff; /* White color for text */
+    transition: color 0.3s ease-in-out;
+}
+
+.about-text:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Increase the shadow for emphasis */
+}
+
+.about-text p:hover {
+    color: #8f2d7b; /* Slightly darker shade on hover for contrast */
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    color: white;
+}
+
+#main-content, #main-content2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.figure {
+    width: 22%; /* Adjust width as needed */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure no overflow */
+    transition: transform 0.3s ease-in-out; /* Smooth expand effect */
+}
+
+.figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.figure img.Sirv.image-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.figure:hover img.Sirv.image-hover {
+    opacity: 1;
+}
+
+.figure:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.figure:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 16px; /* Adjust font size as needed */
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.order-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #8f2d7b; /* Adjust button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.order-button:hover {
+    background-color: #ff54dd; /* Darker shade on hover */
+}
+
+
+#footer {
+
+    text-align: center;
+    padding: 10px 0;
+    line-height: 20px;
+    margin-top: 20px; /* Push footer to the bottom */
+}
+
+#footer h4{
+    text-align: center;
+    color: #000;
+}
+
+#footer p {
+    text-align: center;
+    color: #000;
+}
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: rgb(23, 23, 23);
+    text-align: center;
+}
+
+.inputBox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+.inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    pointer-events: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.inputBox input:focus ~ label, .inputBox input:valid ~ label {
+    top: -18px;
+    font-size: 14px;
+    color: #999;
+}
+
+.inputBox input:focus, .inputBox input:valid {
+    border-bottom: 1px solid #333;
+}
+
+.inputBox input[type="submit"] {
+    width: auto;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.inputBox input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.form p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form p a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form p a:hover {
+    text-decoration: underline;
+}
+#header1 img {
+    max-width: 100%;
+    height: auto;
+}
+#header1 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#content-section1 {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.about-text1 {
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+    background: #000000; /* Darker background for the content area */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow for visual depth */
+    border-radius: 8px; /* Rounded corners */
+    animation: fadeIn 1s ease-in-out; /* Optional fade-in animation */
+}
+
+.about-text1 h2 {
+    font-size: 24px;
+    color: #ffffff; /* White text color */
+    margin-bottom: 20px;
+}
+
+.location {
+    margin-bottom: 20px;
+}
+
+.location h3 {
+    font-size: 20px;
+    color: #ffffff; /* White text color */
+    margin-bottom: 10px;
+}
+
+.location p {
+    font-size: 16px;
+    color: #fff ; /* Lighter gray for text */
+}
+
+.location a {
+    color: #8f2d7b; /* Highlight color for links */
+    text-decoration: none;
+}
+
+.location a:hover {
+    text-decoration: underline;
+    color: #ff6f9f; /* Slightly lighter shade on hover for contrast */
+}
+
+/* Optional: Fade-in animation for the content area */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
